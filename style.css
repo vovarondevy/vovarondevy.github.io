@@ -1,0 +1,111 @@
+@font-face{
+	font-family: font1;
+	src: url("fonts/etna-4F.otf")
+}
+body{	
+	margin: 0
+}
+a{
+	text-decoration-line: none;
+}
+#header{
+	position: fixed;
+	height: 50px;
+	font-family: font1;
+	z-index: 1000
+}
+#header .btn{
+	display: inline-block;
+	vertical-align: top;
+	height: 30px;
+	padding: 5px;
+	padding-bottom: 15px;
+	margin-right: 10px;
+	font-family: font1;
+	color: #aaa
+	font-size 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+#header .btn .arr{
+	position: relative;	
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;
+	width: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#header .btn .arr::before{
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 0;
+	background-color: #aaa;
+	height: 2px;
+	width: 10px;
+	transform: rotate(-45deg);
+}	
+#header .btn:hover .arr::before{
+	transform: rotate(45deg);
+}
+#header .btn .arr::after{
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(50% - 1px);
+	right: 0;
+	background-color: #aaa;
+ 	height: 2px;
+	width: 10px;
+	transform: rotate(45deg);
+}
+#header .btn:hover .arr::after{
+	transform: rotate(-45deg); 
+}
+#header .btn:hover{
+	background-color: rgba(0,0,0, 08);
+}
+#header .btn .menu{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 10px;
+	transform: translateY(-50%) scaleY(0);
+	transition-duration: 200ms;
+}
+#header .btn:hover .menu{
+	transform:translateY(0) scaleY(1); 
+}
+#header .btn .menu-btn{
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #aaa;
+	text-transform: none; 
+}
+#content{
+	padding: 	
+	min-height: 100vh;
+	background-color: #111;
+}
+#content video{
+	width: 100%
+}
+#footer{
+	padding: 50px;
+	background-color: #222;
+	text-align: center;
+}
+#footer span{
+	margin: 20px;
+	color: #aaa;
+}
+#footer a{
+	color: #aaa
+}
+#footer a:hover{
+	text-decoration-line: underline;
+}
